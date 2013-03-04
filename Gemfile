@@ -7,6 +7,27 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 
+gem 'cancan'
+gem 'carrierwave'
+gem 'devise'
+gem 'draper'
+gem 'fabrication'
+gem 'kaminari'
+gem 'liquid'
+gem 'ransack'
+gem 'russian'
+gem 'simple_form'
+gem 'simple-navigation'
+gem 'simple-navigation-bootstrap'
+gem 'slim'
+gem 'slim-rails'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'squeel'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem "nested_form"
+gem 'enumerize'
+gem 'rails_admin'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +42,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
