@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Article.delete_all
+Article.populate 20 do | article |
+  article.title = Populator.words(2..6)
+  article.body = Populator.sentences(10..40)
+  article.user_id = 1
+end

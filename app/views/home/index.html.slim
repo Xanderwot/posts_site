@@ -1,0 +1,11 @@
+h1	There are some news here
+table.table.table-hover
+	- @articles.each do |article|
+		tr
+			td.title= article.title
+			td.date= article.created_at
+		tr
+			td colspan=2 = article.body.split(" ")[0..99].join(" ")
+		tr
+			td= article.user.email	
+			td.link= link_to "Show details", article_path(article)

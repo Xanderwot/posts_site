@@ -23,10 +23,14 @@ gem 'slim'
 gem 'slim-rails'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'squeel'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem "nested_form"
 gem 'enumerize'
 gem 'rails_admin'
+gem 'ckeditor_rails'
+gem 'populator'
 
 
 # Gems used only for assets and not required
