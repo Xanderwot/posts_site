@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 1efcf9a4c0667d0fd157567bba34776b71b27497
+  revision: 29b7081e2fd570416dfd82186f1ad853d7dc9ded
   specs:
     twitter-bootstrap-rails (2.2.6)
       actionpack (>= 3.1)
@@ -66,8 +66,9 @@ GEM
       activesupport (>= 3.2.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
-    ckeditor_rails (4.0.1.1)
-      railties (>= 3.0)
+    ckeditor (4.0.2)
+      mime-types
+      orm_adapter
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -104,7 +105,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    fabrication (2.6.1)
+    fabrication (2.6.2)
     ffi (1.4.0)
     font-awesome-sass-rails (3.0.2.2)
       railties (>= 3.1.1)
@@ -126,13 +127,13 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    less (2.2.2)
+    less (2.3.1)
       commonjs (~> 0.2.6)
-    less-rails (2.2.6)
+    less-rails (2.3.2)
       actionpack (>= 3.1)
-      less (~> 2.2.0)
+      less (~> 2.3.1)
     libv8 (3.11.8.13)
-    liquid (2.4.1)
+    liquid (2.5.0)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -242,7 +243,7 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
-    squeel (1.0.17)
+    squeel (1.0.18)
       activerecord (~> 3.0)
       activesupport (~> 3.0)
       polyamorous (~> 0.5.0)
@@ -271,7 +272,7 @@ PLATFORMS
 DEPENDENCIES
   cancan
   carrierwave
-  ckeditor_rails
+  ckeditor
   coffee-rails (~> 3.2.1)
   cucumber-rails
   devise

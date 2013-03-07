@@ -11,3 +11,7 @@ Article.populate 20 do | article |
   article.body = Populator.sentences(10..40)
   article.user_id = 1
 end
+%w[admin newsmaker comentator].each do |role|
+	User.create!(:email => "#{role}@example.com", :password => "qweqweqwe", :password_confirmation => "qweqweqwe")
+	User.last.update_attribute(:role, "#{role}")
+end	

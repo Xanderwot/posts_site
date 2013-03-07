@@ -1,6 +1,14 @@
-table.table.table-hover
+h1	There are some news here
 - @articles.each do |article|
-	tr
-		td= article.title
-	tr
-		td= article.body	
+	table.table.table-bordered
+		tr
+			td.title
+				= article.title
+				div.edit= edit_article(article)
+			td.date= article.created_at
+		tr
+			td colspan=2 = raw "#{article.body.split(" ")[0..99].join(" ")}"
+		tr
+			td= article.user.email	
+			td.link
+				= link_to "Show details(#{comments_count(article)} comments)", article_path(article) 

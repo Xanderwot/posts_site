@@ -1,5 +1,5 @@
-table.table.table-hover
+table.table.table-bordered
 	tr
 		td= @article.title
 	tr
-		td= @article.body
+		td= raw "#{@article.body}"

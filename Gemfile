@@ -29,8 +29,8 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem "nested_form"
 gem 'enumerize'
 gem 'rails_admin'
-gem 'ckeditor_rails'
 gem 'populator'
+gem "ckeditor"
 
 
 # Gems used only for assets and not required
