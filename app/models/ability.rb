@@ -29,5 +29,6 @@ class Ability
   def admin
     can :manage, :all
     can :update, Article
+    can :featured, Article
   end
 end

@@ -31,6 +31,7 @@ html lang="en"
               li= sign_in_link(current_user)
               li= hide_registration_link(current_user)
               li= new_article_link
+              li= link_to "Articles", articles_path
 
     .container-fluid
 
@@ -39,11 +40,9 @@ html lang="en"
           .well.sidebar-nav
             ul.nav.nav-list
               li.nav-header Sidebar
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              li=render "carousel"
         .span9
-          = bootstrap_flash
+          .alert-message=
           = yield
     
       footer

@@ -1,14 +1,15 @@
-h1	There are some news here
+/ .home-carousel=render "carousel"
+h1 There are some news here
 - @articles.each do |article|
 	table.table.table-bordered
 		tr
 			td.title
 				= article.title
 				div.edit= edit_article(article)
-			td.date= article.created_at
+			td.date= article.created_at.strftime("%d-%b-%Y %H:%M")
 		tr
-			td colspan=2 = raw "#{article.body.split(" ")[0..99].join(" ")}"
+			td colspan=2 =raw "#{article.body.split(" ")[0..99].join(" ")}"
 		tr
 			td= article.user.email	
 			td.link
-				= link_to "Show details(#{comments_count(article)} comments)", article_path(article) 
+				= link_to "Show details(#{comments_count(article)} comments)", article_path(article)			 

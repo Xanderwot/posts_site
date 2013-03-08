@@ -31,6 +31,7 @@ gem 'enumerize'
 gem 'rails_admin'
 gem 'populator'
 gem "ckeditor"
+gem 'will_paginate', '~> 3.0'
 
 
 # Gems used only for assets and not required
