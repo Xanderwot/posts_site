@@ -10,7 +10,7 @@
     <div class="<%=carousel_active_item(index)%>">
       <%= carousel_image(carousel) %>
       <div class="carousel-caption">
-        <h4><%= carousel.title%></h4>
+        <h4><%= link_to carousel.title, article_path(carousel)%></h4>
       </div>
     </div>
     <% end %> 

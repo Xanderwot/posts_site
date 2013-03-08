@@ -20,11 +20,7 @@ module ArticlesHelper
 		end	
 	end
 
-	def scale_body_image(body)
-		params = body.scan(/\width:\s\d+\w+\W\s\w+\W\s\d+\w+\W/)
-		params.each do |param|
-			body[param] = "" unless param.nil?
-		end	
-		body.split(" ")[0..99].join(" ")
+	def comments_text(article)
+		article.comments.count == 0 ? "No comments et" : "Comments"
 	end
 end

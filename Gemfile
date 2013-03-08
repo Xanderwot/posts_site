@@ -50,8 +50,15 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
 end
+
+group :test do
+	gem 'database_cleaner'
+	gem 'cucumber-rails'
+  gem "factory_girl_rails"
+  gem 'shoulda-matchers'
+  gem 'pickle'
+end	
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

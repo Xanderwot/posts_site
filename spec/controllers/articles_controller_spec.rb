@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe ArticlesController do
+# describe ArticlesController do
 
-end
+# end

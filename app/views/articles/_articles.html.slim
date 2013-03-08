@@ -8,8 +8,8 @@
 				= article.created_at.strftime("%d-%b-%Y %H:%M")
 				div.featured=can_featured?(article)
 		tr
-			td colspan=2 =raw "#{scale_body_image(article.body)}"
+			td colspan=2 =raw "#{article.scale_body_image}"
 		tr
 			td= article.user.email	
 			td.link
-				= link_to "Show details(#{comments_count(article)} comments)", article_path(article) 
+				= link_to "Show details(#{comments_count(article)} comments)", article_path(article)

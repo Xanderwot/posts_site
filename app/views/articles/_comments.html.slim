@@ -1,3 +1,4 @@
+h5= comments_text(@article)
 - @article.comments.each do |comment|
 	table.table.table-striped
 		tr
@@ -5,8 +6,9 @@
 			td.date=comment.created_at.strftime("%d-%b-%Y %H:%M")
 		tr
 			td colspan=2 = comment.content
-h4 Add new comment			
-= simple_form_for :comment, :url => comments_path, :remote => true do |f|
-	= f.input :content, as: :text, :input_html => { :cols => 100, :rows => 5 }
-	= f.input :article_id, :as => :hidden, :input_html => { :value => @article.id }
-	= f.button :submit, :class => "btn btn-primary", :remote => true
+- if can? :create, Comment			
+	h4 Add new comment
+	= simple_form_for :comment, :url => comments_path, :remote => true do |f|
+		= f.input :content, as: :text, :input_html => { :cols => 100, :rows => 5 }
+		= f.input :article_id, :as => :hidden, :input_html => { :value => @article.id }
+		= f.button :submit, :class => "btn btn-primary", :remote => true

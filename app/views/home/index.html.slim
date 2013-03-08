@@ -1,4 +1,4 @@
-h1 There are some news here
+h1 Las added articles
 - @articles.each do |article|
 	table.table.table-bordered
 		tr
@@ -7,7 +7,7 @@ h1 There are some news here
 				div.edit= edit_article(article)
 			td.date= article.created_at.strftime("%d-%b-%Y %H:%M")
 		tr
-			td colspan=2 =raw "#{scale_body_image(article.body)}"
+			td colspan=2 =raw "#{article.scale_body_image}"
 		tr
 			td= article.user.email	
 			td.link
