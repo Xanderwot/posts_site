@@ -39,10 +39,8 @@ html lang="en"
         .span3
           .well.sidebar-nav
             ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "link1", "/link1"
+              li=render "carousel"
         .span9
-          .alert-message=
           = yield
     
       footer

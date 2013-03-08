@@ -5,10 +5,10 @@
 				= article.title
 				div.edit= edit_article(article)
 			td.date
-				= article.created_at
+				= article.created_at.strftime("%d-%b-%Y %H:%M")
 				div.featured=can_featured?(article)
 		tr
-			td colspan=2 = raw "#{article.body.split(" ")[0..99].join(" ")}"
+			td colspan=2 =raw "#{scale_body_image(article.body)}"
 		tr
 			td= article.user.email	
 			td.link

@@ -19,4 +19,12 @@ module ArticlesHelper
 			link_to "", featured_path(:id => article), :remote => true, :class => "icon-heart"	
 		end	
 	end
+
+	def scale_body_image(body)
+		params = body.scan(/\width:\s\d+\w+\W\s\w+\W\s\d+\w+\W/)
+		params.each do |param|
+			body[param] = "" unless param.nil?
+		end	
+		body.split(" ")[0..99].join(" ")
+	end
 end

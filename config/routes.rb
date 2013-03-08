@@ -3,7 +3,7 @@ PostsSite::Application.routes.draw do
 
   devise_for :users
 
-  resources :articles
+  resources :articles, :comments
 
   match "/featured" => "articles#featured_article"
   match "/unfeatured" => "articles#unfeatured_article"

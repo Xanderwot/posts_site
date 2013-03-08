@@ -29,25 +29,18 @@ table tr td div.edit {
 }
 div.span9 .alert-message {
 	position: fixed;
-	font: 18px bold;
+	font: 22px bold;
 	top: 50%;
-	left: 20%;
-	width: 60%;
-	height: 70px;
+	left: 30%;
+	width: 40%;
 	text-align: center;
 }
 .carousel {
-	position: static;
-	width: 400px;
-	height: 400px;
+	width: 100%;
 }
-.span9 {
-	width: 70%;
-	padding-left: 15%;
+.row-fluid .span9 {
+	width: 60%;
 }
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
+tr img {
+	width: 10%;
 }

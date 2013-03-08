@@ -1,5 +1,9 @@
 table.table.table-bordered
 	tr
-		td= @article.title
+		td 
+			h4= @article.title
 	tr
 		td= raw "#{@article.body}"
+h4 Comments
+div.comments		
+	= render "comments"					

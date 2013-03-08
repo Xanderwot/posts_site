@@ -8,10 +8,9 @@
   <div class="carousel-inner">
     <% @carousels.each_with_index do |carousel, index| %>
     <div class="<%=carousel_active_item(index)%>">
-      <img src="http://localhost:3000/ckeditor_assets/pictures/1/content_5aw5127qko0.jpg" alt>
+      <%= carousel_image(carousel) %>
       <div class="carousel-caption">
         <h4><%= carousel.title%></h4>
-        <p><%= carousel.body.split(" ")[0..9].join(" ")%></p>
       </div>
     </div>
     <% end %> 

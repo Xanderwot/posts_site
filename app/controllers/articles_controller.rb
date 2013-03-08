@@ -6,11 +6,11 @@ class ArticlesController < ApplicationController
 	def index
 		@articles = Article.paginate	:page => params[:page], 
                                   :order => 'created_at desc',
-                                  :per_page => 10
+                                  :per_page => 10                             
 	end
 
 	def create
-		@article.update_attribute(:user_id, current_user.id)
+		@article.update_attributes(:user_id => current_user.id)
 		@article.save
 		respond_with @article
 	end
