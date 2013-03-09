@@ -1,11 +1,11 @@
 module HomeHelper
 	
-	def edit_article(article)
-		link_to "Edit this article", edit_article_path(article) if can? :update, article
-	end
+	# def edit_article(article)
+	# 	link_to "Edit", edit_article_path(article), :class => "icon-edit" if can? :update, article
+	# end
 
 	def carousel_active_class(index)
-		"class='active'" if index == 0
+		"class=active" if index == 0
 	end
 
 	def carousel_active_item(index)

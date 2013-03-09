@@ -3,7 +3,9 @@ h5= comments_text(@article)
 	table.table.table-striped
 		tr
 			td=comment.user.email
-			td.date=comment.created_at.strftime("%d-%b-%Y %H:%M")
+			td.date
+				=comment.created_at.strftime("%d-%b-%Y %H:%M")
+				div=delete_comment(comment)
 		tr
 			td colspan=2 = comment.content
 - if can? :create, Comment			

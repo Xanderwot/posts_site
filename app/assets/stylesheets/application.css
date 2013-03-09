@@ -35,9 +35,9 @@ div.span9 .alert-message {
 	width: 40%;
 	text-align: center;
 }
-.carousel {
+/*.carousel {
 	width: 100%;
-}
+}*/
 .row-fluid .span9 {
 	width: 60%;
 }
@@ -51,4 +51,13 @@ tr img {
 .carousel-caption h4 a:hover {
 	text-decoration: underline;
 	color: #fff;
+}
+div.edit a {
+	padding-right: 10px;
+}
+div.search {
+	float: right;
+}
+div.search #search_body_contains {
+	margin-top: 15px; 
 }

@@ -11,7 +11,6 @@ gem 'cancan'
 gem 'carrierwave'
 gem 'devise'
 gem 'draper'
-gem 'fabrication'
 gem 'kaminari'
 gem 'liquid'
 gem 'ransack'
@@ -32,6 +31,7 @@ gem 'rails_admin'
 gem 'populator'
 gem "ckeditor"
 gem 'will_paginate', '~> 3.0'
+gem "meta_search"
 
 
 # Gems used only for assets and not required
@@ -53,11 +53,13 @@ group :test, :development do
 end
 
 group :test do
-	gem 'database_cleaner'
-	gem 'cucumber-rails'
+	gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
   gem "factory_girl_rails"
   gem 'shoulda-matchers'
   gem 'pickle'
+  gem 'webrat'
+  gem 'capybara'
 end	
 
 # To use ActiveModel has_secure_password

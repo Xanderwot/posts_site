@@ -1,0 +1,4 @@
+<%= form_for @search, :url => articles_path, :html => {:method => :get} do |f| %>
+  <%= f.text_field :body_contains %>
+  <%= f.submit "Search", :class => "btn btn-primary" %>
+<% end %>

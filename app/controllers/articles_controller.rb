@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
 	respond_to :js, :only => [ :featured_article, :unfeatured_article ]
 	
 	def index
-		@articles = Article.paginate	:page => params[:page], 
+		@search = Article.search(params[:search])
+		@articles = @search.paginate	:page => params[:page], 
                                   :order => 'created_at desc',
                                   :per_page => 10                             
 	end
@@ -20,6 +21,11 @@ class ArticlesController < ApplicationController
 		respond_with @article
 	end
 
+	def destroy
+		@article.destroy
+		respond_with @article
+	end
+
 	def featured_article
 		@articles = Article.paginate	:page => params[:page], 
                                   :order => 'created_at desc',
@@ -27,7 +33,7 @@ class ArticlesController < ApplicationController
 		if (less_than_five?) && (can? :featured, @article)
 			@article.update_attribute(:featured, true)
 		else
-			flash[:error] = "Can't featured more than fout articles"
+			flash[:error] = "Can't featured more than four articles"
 		end		
 	end
 

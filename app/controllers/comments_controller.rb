@@ -9,4 +9,9 @@ class CommentsController < ApplicationController
 		@comment.save
 		@article = @comment.article
 	end
+
+	def destroy
+		@article = @comment.article
+		@comment.destroy		
+	end
 end
