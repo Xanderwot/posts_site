@@ -7,7 +7,12 @@ Given(/^article "(.*?)" with content "(.*?)" is exist$/) do |title, content|
   Article.create!(:title => title, :body => content, :user_id => User.last.id)
 end
 
-When(/^"(.*?)" logs in$/) do |user|
+Given(/^comment with content "(.*?)" is exist$/) do |content|
+  Comment.create!(:content => content, :article_id => Article.last.id)
+  Comment.last.update_attribute(:user_id, User.last.id)
+end
+
+When(/^I login in as "(.*?)"$/) do |user|
 	visit(root_path)
 	click_link 'Sign in'
 	within("#new_user") do
@@ -40,3 +45,30 @@ When(/^I edit article with new title "(.*?)" and content "(.*?)"$/) do |title, c
   browser.execute_script("CKEDITOR.instances['article_body'].setData('#{content}');")
   find_by_id("cke_9").click
 end
+
+When(/^I delete existed article$/) do
+  visit articles_path
+  click_link('Delete')
+  page.driver.browser.switch_to.alert.accept
+  sleep 2
+end
+
+Then(/^I shoul not see any articles$/) do
+  Article.count.should == 0
+end
+
+When(/^I add comment contains "(.*?)" to article$/) do |content|
+  visit articles_path
+  click_link "Show details"
+  fill_in "comment_content", :with => content
+  click_button "Save Comment"
+end
+
+When(/^I delete comment$/) do
+  visit articles_path
+  click_link "Show details"
+  click_link "Delete"
+  page.driver.browser.switch_to.alert.accept
+  sleep 2
+end
+

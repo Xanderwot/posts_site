@@ -14,4 +14,5 @@
 		tr
 			td= article.user.email	
 			td.link
-				= link_to "Show details(#{comments_count(article)} comments)", article_path(article)
+				= link_to "Show details", article_path(article)
+				= "(#{comments_count(article)} comments)"

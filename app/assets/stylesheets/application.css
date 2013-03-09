@@ -27,7 +27,7 @@ table.table.table-bordered {
 table tr td div.edit {
 	font: 14px none;
 }
-div.span9 .alert-message {
+div.span10 .alert-message {
 	position: fixed;
 	font: 22px bold;
 	top: 50%;
@@ -35,9 +35,9 @@ div.span9 .alert-message {
 	width: 40%;
 	text-align: center;
 }
-/*.carousel {
-	width: 100%;
-}*/
+.span10 {
+	padding-left :25%;
+}
 .row-fluid .span9 {
 	width: 60%;
 }
@@ -57,7 +57,26 @@ div.edit a {
 }
 div.search {
 	float: right;
+	height: 25px;
+	margin-top: -10px;
 }
 div.search #search_body_contains {
 	margin-top: 15px; 
+}
+.carousel {
+	height: 250px;
+}
+.item img {
+	height: 250px;
+	width: 100%;
+}
+/*Footer in bottom page*/
+html, body {
+	height: 90%;
+}
+.container-fluid {
+	min-height: 100%;
+}
+footer {
+	padding-bottom: 15px;
 }

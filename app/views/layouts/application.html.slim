@@ -36,17 +36,16 @@ html lang="en"
     .container-fluid
 
       .row-fluid
-        .span3
-          .well.sidebar-nav
-            ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "link1", "/link1"
-        .span9
+        / .span3
+          / .well.sidebar-nav
+          /   ul.nav.nav-list
+          /     li.nav-header Sidebar
+          /     li= link_to "link1", "/link1"
+        .span10
           .alert-message=
-          = yield
-    
-      footer
-        p &copy; Company 2013
+          = yield    
+  footer
+    p &copy; Company 2013
     /!
       Javascripts
       \==================================================
