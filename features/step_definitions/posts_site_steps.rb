@@ -12,6 +12,15 @@ Given(/^comment with content "(.*?)" is exist$/) do |content|
   Comment.last.update_attribute(:user_id, User.last.id)
 end
 
+Given(/^(\d+) featured articles has been created$/) do |count|
+  count.to_i.times do
+    Article.create!(:title => "title", :body => "body", :user_id => User.last.id)
+    Article.last.update_attribute(:featured, true)
+  end  
+end
+
+
+
 When(/^I login in as "(.*?)"$/) do |user|
 	visit(root_path)
 	click_link 'Sign in'
@@ -24,6 +33,14 @@ end
 
 Then(/^I should not see "(.*?)"$/) do |text|
   page.should_not have_content (text)
+end
+
+Then(/^I should not see css "(.*?)"$/) do |text|
+  page.should_not have_css(text)
+end
+
+Then(/^I should see css "(.*?)"$/) do |text|
+  page.should have_css(text)
 end
 
 When(/^I create article with title "(.*?)" and content "(.*?)"$/) do |title, content|
@@ -70,5 +87,25 @@ When(/^I delete comment$/) do
   click_link "Delete"
   page.driver.browser.switch_to.alert.accept
   sleep 2
+end
+
+When(/^I mark article as featured$/) do
+  visit articles_path
+  click_link "Featured"
+  sleep 2
+end
+
+When(/^I mark article as unfeatured$/) do
+  visit articles_path
+  click_link "Unfeatured"
+  sleep 2
+end
+
+Then(/^I shoud see (\d+) featured articles$/) do |num|
+  Article.where(:featured => true).count.should == num.to_i
+end
+
+Then(/^I go to root path$/) do
+  visit root_path
 end
 
