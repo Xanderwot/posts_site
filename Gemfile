@@ -5,33 +5,63 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :production do
+  gem 'pg'
+  gem 'cancan'
+  gem 'carrierwave'
+  gem 'devise'
+  gem 'draper'
+  gem 'kaminari'
+  gem 'liquid'
+  gem 'ransack'
+  gem 'russian'
+  gem 'simple_form'
+  gem 'simple-navigation'
+  gem 'simple-navigation-bootstrap'
+  gem 'slim'
+  gem 'slim-rails'
+  gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+  gem 'squeel'
+  gem "therubyracer"
+  gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+  gem "nested_form"
+  gem 'enumerize'
+  gem 'rails_admin'
+  gem 'populator'
+  gem "ckeditor"
+  gem 'will_paginate', '~> 3.0'
+  gem "meta_search"
+end
 
-gem 'cancan'
-gem 'carrierwave'
-gem 'devise'
-gem 'draper'
-gem 'kaminari'
-gem 'liquid'
-gem 'ransack'
-gem 'russian'
-gem 'simple_form'
-gem 'simple-navigation'
-gem 'simple-navigation-bootstrap'
-gem 'slim'
-gem 'slim-rails'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
-gem 'squeel'
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem "nested_form"
-gem 'enumerize'
-gem 'rails_admin'
-gem 'populator'
-gem "ckeditor"
-gem 'will_paginate', '~> 3.0'
-gem "meta_search"
+group :development do
+  gem 'sqlite3'
+  gem 'cancan'
+  gem 'carrierwave'
+  gem 'devise'
+  gem 'draper'
+  gem 'kaminari'
+  gem 'liquid'
+  gem 'ransack'
+  gem 'russian'
+  gem 'simple_form'
+  gem 'simple-navigation'
+  gem 'simple-navigation-bootstrap'
+  gem 'slim'
+  gem 'slim-rails'
+  gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+  gem 'squeel'
+  gem "therubyracer"
+  gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+  gem "nested_form"
+  gem 'enumerize'
+  gem 'rails_admin'
+  gem 'populator'
+  gem "ckeditor"
+  gem 'will_paginate', '~> 3.0'
+  gem "meta_search"
+end  
 
 
 # Gems used only for assets and not required
