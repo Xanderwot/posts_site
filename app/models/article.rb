@@ -12,10 +12,14 @@ class Article < ActiveRecord::Base
   	end
 
   	def scale_body_image
-		params = body.scan(/\width:\s\d+\w+\W\s\w+\W\s\d+\w+\W/)
-		params.each do |param|
+		width = body.scan(/\width:\s\d+\w+\W\s/)
+		height = body.scan(/height:\s\d+\w+\W/)
+		width.each do |param|
 			body[param] = "" unless param.nil?
-		end	
+		end
+		height.each do |param|
+			body[param] = "" unless param.nil?
+		end
 		body.split(" ")[0..99].join(" ")
 	end
 end
