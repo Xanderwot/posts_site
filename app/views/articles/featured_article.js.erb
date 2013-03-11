@@ -1,2 +1,2 @@
-$('.article-content').html("<%= escape_javascript(render 'articles') %>");
+$(".<%= @article.id %>").html("<%= escape_javascript(render :partial => "article", :locals => {:article => @article}) %>");
 $('.alert-message').html("<%= escape_javascript(bootstrap_flash) %>");

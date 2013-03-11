@@ -36,7 +36,7 @@ module ArticlesHelper
 		if articles.count == 0
 			"No any article found"
 		else
-			render "articles"
+			render :partial => "articles"
 		end		
 	end
 end

@@ -23,4 +23,8 @@ module HomeHelper
 			image_tag "/ckeditor_assets/pictures/4/content_17_1v2.jpg"
 		end	
 	end
+
+	def render_carousel
+		render "carousel" if Article.where(:featured => true).count > 0
+	end
 end
