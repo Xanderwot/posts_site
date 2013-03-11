@@ -158,6 +158,7 @@ GEM
     nested_form (0.3.1)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
+    pg (0.14.1)
     pickle (0.4.11)
       cucumber (>= 0.8)
       rake
@@ -314,6 +315,7 @@ DEPENDENCIES
   meta_search
   nested_form
   paperclip!
+  pg
   pickle
   populator
   rails (= 3.2.12)
