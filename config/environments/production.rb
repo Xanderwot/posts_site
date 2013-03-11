@@ -27,7 +27,7 @@ PostsSite::Application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
-  config.action_mailer.default_url_options = { :host => 'http://boiling-sands-8244.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'boiling-sands-8244.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
@@ -35,7 +35,7 @@ PostsSite::Application.configure do
   config.action_mailer.smtp_settings = {
   address: "smtp.gmail.com",
   port: 587,
-  domain: "http://boiling-sands-8244.herokuapp.com",
+  domain: "boiling-sands-8244.herokuapp.com",
   authentication: "plain",
   enable_starttls_auto: true,
   user_name: "postssite@gmail.com",
