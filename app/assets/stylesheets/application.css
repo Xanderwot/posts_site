@@ -80,3 +80,9 @@ html, body {
 footer {
 	padding-bottom: 15px;
 }
+#article_title {
+	width: 50em;
+}
+#comment_content {
+	width: 40em;
+}
