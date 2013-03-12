@@ -8,7 +8,7 @@ class Article < ActiveRecord::Base
 
   public
   	def find_img_url
-  		body.scan(/\/\w+\/\w+[\/][\w]+[\W][\w\-]+\.\w+/).first
+  		body.scan(/http:\W+[\w\W]+[\.]\w+/).first || body.scan(/\/\w+\/\w+[\/][\w]+[\W][\w\-]+\.\w+/).first
   	end
 
   	def scale_body_image
