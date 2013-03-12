@@ -5,6 +5,6 @@ class HomeController < ApplicationController
 	def index
 		@search = Article.search(params[:search])
 		@articles = Article.order("created_at DESC").limit(10)
-		@carousels = Article.where(:featured => true)
+		@carousels = Article.where(featured: true)
 	end
 end

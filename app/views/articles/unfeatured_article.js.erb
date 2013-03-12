@@ -1,1 +1,1 @@
-$(".<%= @article.id %>").html("<%= escape_javascript(render :partial => "article", :locals => {:article => @article}) %>");
+$(".<%= @article.id %>").html("<%= j(render "article", article: @article) %>");

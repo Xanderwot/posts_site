@@ -2,7 +2,7 @@
   <ol class="carousel-indicators">
     <% @carousels.each_with_index do |carousel, index| %>
       <li data-target="#myCarousel" data-slide-to=<%= index %> <%= carousel_active_class(index) %>></li>
-    <% end %>  
+    <% end %>
   </ol>
   <!-- Carousel items -->
   <div class="carousel-inner">
@@ -13,7 +13,7 @@
         <h4><%= link_to carousel.title, article_path(carousel)%></h4>
       </div>
     </div>
-    <% end %> 
+    <% end %>
   </div>
   <!-- Carousel nav -->
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>

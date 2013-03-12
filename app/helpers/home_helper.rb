@@ -1,5 +1,5 @@
 module HomeHelper
-	
+
 	# def edit_article(article)
 	# 	link_to "Edit", edit_article_path(article), :class => "icon-edit" if can? :update, article
 	# end
@@ -12,8 +12,8 @@ module HomeHelper
 		if index == 0
 			"active item"
 		else
-			"item"	
-		end	
+			"item"
+		end
 	end
 
 	def carousel_image(article)
@@ -21,10 +21,10 @@ module HomeHelper
 			image_tag article.find_img_url
 		else
 			image_tag "/ckeditor_assets/pictures/4/content_17_1v2.jpg"
-		end	
+		end
 	end
 
 	def render_carousel
-		render "carousel" if Article.where(:featured => true).count > 0
+		render "carousel" if Article.where(featured: true).count > 0
 	end
 end

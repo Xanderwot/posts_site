@@ -1,17 +1,17 @@
 table.table.table-bordered
-		tr
-			td.title
-				= article.title
-				div.edit
-					= edit_article(article)
-					= delete_article(article)
-			td.date
-				= article.created_at.strftime("%d-%b-%Y %H:%M")
-				div.featured=can_featured?(article)
-		tr
-			td colspan=2 =raw "#{article.scale_body_image}"
-		tr
-			td= article.user.email	
-			td.link
-				= link_to "Show details", article_path(article)
-				= "(#{comments_count(article)} comments)"
+	tr
+		td.title
+			= article.title
+			div.edit
+				= edit_article(article)
+				= delete_article(article)
+		td.date
+			= article.created_at.strftime("%d-%b-%Y %H:%M")
+			div.featured=can_featured?(article)
+	tr
+		td colspan=2 =raw "#{article.scale_body_image}"
+	tr
+		td= article.user.email
+		td.link
+			= link_to "Show details", article_path(article)
+			= "(#{comments_count(article)} comments)"

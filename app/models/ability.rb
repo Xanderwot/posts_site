@@ -17,13 +17,13 @@ class Ability
 
   def comentator
     can :read, Article
-    can [ :read, :create ], Comment    
+    can [ :read, :create ], Comment
   end
 
   def newsmaker
     can [ :read, :create ], Article
-    can :update, Article, :user_id => @user.id
-    can [ :read, :create ], Comment    
+    can :update, Article, user_id: @user.id
+    can [ :read, :create ], Comment
   end
 
   def admin

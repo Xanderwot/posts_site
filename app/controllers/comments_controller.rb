@@ -12,6 +12,6 @@ class CommentsController < ApplicationController
 
 	def destroy
 		@article = @comment.article
-		@comment.destroy		
+		@comment.destroy
 	end
 end

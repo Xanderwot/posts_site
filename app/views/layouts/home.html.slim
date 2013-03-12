@@ -32,7 +32,7 @@ html lang="en"
               li= hide_registration_link(current_user)
               li= new_article_link
               li= link_to "Articles", articles_path
-            div.search= render "articles/search"  
+            div.search= render "articles/search"
 
     .container-fluid
 
@@ -40,8 +40,9 @@ html lang="en"
         .span3
           =render_carousel
         .span9
+          =bootstrap_flash
           = yield
-    
+
   footer
     p &copy; Company 2013
     /!

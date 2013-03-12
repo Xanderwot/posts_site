@@ -1,2 +1,2 @@
-$('.comments').html("<%= escape_javascript(render 'articles/comments') %>");
+$('.comments').html("<%= j(render 'articles/comments') %>");
 $('#comment_content').val('');

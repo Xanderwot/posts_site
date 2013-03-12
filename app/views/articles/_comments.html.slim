@@ -8,7 +8,7 @@ h5= comments_text(@article)
 				div=delete_comment(comment)
 		tr
 			td colspan=2 = comment.content
-- if can? :create, Comment			
+- if can? :create, Comment
 	h4 Add new comment
 	= simple_form_for :comment, :url => comments_path, :remote => true do |f|
 		= f.input :content, as: :text, :input_html => { :cols => 100, :rows => 5 }

@@ -1,10 +1,10 @@
 class Article < ActiveRecord::Base
 	belongs_to :user
-	has_many :comments, :dependent => :destroy
+	has_many :comments, dependent: :destroy
 
   attr_accessible :title, :body, :user_id
 
-  validates :title, :body, :presence => true
+  validates :title, :body, presence: true
 
   public
   	def find_img_url
@@ -12,14 +12,14 @@ class Article < ActiveRecord::Base
   	end
 
   	def scale_body_image
-		width = body.scan(/\width:\s\d+\w+\W\s/)
-		height = body.scan(/height:\s\d+\w+\W/)
-		width.each do |param|
-			body[param] = "" unless param.nil?
+			width = body.scan(/\width:\s\d+\w+\W\s/)
+			height = body.scan(/height:\s\d+\w+\W/)
+			width.each do |param|
+				body[param] = "" unless param.nil?
 		end
-		height.each do |param|
-			body[param] = "" unless param.nil?
+			height.each do |param|
+				body[param] = "" unless param.nil?
 		end
-		body.split(" ")[0..99].join(" ")
+			body.split(" ")[0..99].join(" ")
 	end
 end

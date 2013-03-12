@@ -42,8 +42,9 @@ html lang="en"
           /     li.nav-header Sidebar
           /     li= link_to "link1", "/link1"
         .span10
+          =bootstrap_flash
           .alert-message=
-          = yield    
+          = yield
   footer
     p &copy; Company 2013
     /!

@@ -9,7 +9,7 @@ p.lead Las added articles
 		tr
 			td colspan=2 =raw "#{article.scale_body_image}"
 		tr
-			td= article.user.email	
+			td= article.user.email
 			td.link
 				= link_to "Show details", article_path(article)
 				= "(#{comments_count(article)} comments)"
